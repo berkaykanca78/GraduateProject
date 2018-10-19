@@ -1,0 +1,158 @@
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Store_Manager.exe.config
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Store_Manager.exe
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Store_Manager.pdb
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.csprojResolveAssemblyReference.cache
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.OturumAç.resources
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.Properties.Resources.resources
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.csproj.GenerateResource.Cache
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.exe
+c:\users\brkyk\documents\visual studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.pdb
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.Ayarlar.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.KayıtOl.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ŞifremiUnuttum.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.HızlıSatış.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.YöneticiAnaMenü.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ÇalışanAnaMenü.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MüşteriEkle.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MüşterileriGöster.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.DepodakiÜrünleriGöster.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MağazayaÜrünEkle.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.TedarikçiEkle.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.TedarikçileriGöster.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.DepoEkle.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MağazaEkle.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.BorçTakibi.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.BorçÖde.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.SatışYap.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\bin\Debug\Store_Manager.exe.config
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\bin\Debug\Store_Manager.exe
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\bin\Debug\Store_Manager.pdb
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.csprojResolveAssemblyReference.cache
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.Ayarlar.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.BorçTakibi.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.BorçÖde.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.DepodakiÜrünleriGöster.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.DepoEkle.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.HızlıSatış.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.KayıtOl.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MağazadakiÜrünleriGöster.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MağazaEkle.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MağazayaÜrünEkle.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MüşteriEkle.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MüşterileriGöster.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.OturumAç.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.Properties.Resources.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.SatışYap.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.TedarikçiEkle.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.TedarikçileriGöster.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.YöneticiAnaMenü.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ÇalışanAnaMenü.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ÜrünEkle.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ÜrünleriGöster.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ŞifremiUnuttum.resources
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.csproj.GenerateResource.Cache
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.exe
+C:\Users\brkyk\Desktop\Notlarım\FINAL\Project\Yedek6\Store_Manager\Store_Manager\obj\Debug\Store_Manager.pdb
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\EnvDTE.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\stdole.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\EnvDTE80.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\VSLangProj.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\VSLangProj80.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.MSXML.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\VSLangProj2.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\tr\Microsoft.VisualStudio.Data.Services.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\bin\Debug\tr\Microsoft.VisualStudio.Data.Core.resources.dll
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.csproj.Store_Manager.exe.config
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.DebtFollowUp.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ShowCustomers.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ShowSuppliers.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ShowProductsInWarehouse.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.MağazadakiÜrünleriGöster.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ShowProductsInStore.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.DepoyaÜrünEkle.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.ShowSoldProducts.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.SatılanÜrünleriGöster.resources
+C:\Users\brkyk\Documents\Visual Studio 2017\Projects\Store_Manager\Store_Manager\obj\Debug\Store_Manager.AlarmMailGönder.resources

@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Store_ManagerDataSet" targetNamespace="http://tempuri.org/Store_ManagerDataSet.xsd" xmlns:mstns="http://tempuri.org/Store_ManagerDataSet.xsd" xmlns="http://tempuri.org/Store_ManagerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Store_ManagerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Store_ManagerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Store_Manager.Properties.Settings.GlobalReference.Default.Store_ManagerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DebtInnerJoinTableAdapter" GeneratorDataComponentClassName="DebtInnerJoinTableAdapter" Name="DebtInnerJoin" UserDataComponentName="DebtInnerJoinTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Debt.Debt_Date, Customer.Customer_Name, Customer.Customer_Surname, Sale.Product_No, Sale.Sale_Date, Sale.Total_Price, Debt.Remaining_Debt, Sale.Installment_No, Debt.Remaining_Installment_No, 
+                  Debt.Installment_Price, Product.Product_Name
+FROM     Customer INNER JOIN
+                  Debt ON Customer.Customer_TC_No = Debt.Customer_TC_No INNER JOIN
+                  Sale ON Customer.Customer_TC_No = Sale.Customer_TC_No AND Debt.Sale_No = Sale.Sale_No INNER JOIN
+                  Product ON Sale.Product_No = Product.Product_No
+WHERE  (Sale.Sale_Type = 'Bill')
+ORDER BY Debt.Debt_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Debt_Date" DataSetColumn="Debt_Date" />
+              <Mapping SourceColumn="Customer_Name" DataSetColumn="Customer_Name" />
+              <Mapping SourceColumn="Customer_Surname" DataSetColumn="Customer_Surname" />
+              <Mapping SourceColumn="Product_No" DataSetColumn="Product_No" />
+              <Mapping SourceColumn="Sale_Date" DataSetColumn="Sale_Date" />
+              <Mapping SourceColumn="Total_Price" DataSetColumn="Total_Price" />
+              <Mapping SourceColumn="Remaining_Debt" DataSetColumn="Remaining_Debt" />
+              <Mapping SourceColumn="Installment_No" DataSetColumn="Installment_No" />
+              <Mapping SourceColumn="Remaining_Installment_No" DataSetColumn="Remaining_Installment_No" />
+              <Mapping SourceColumn="Installment_Price" DataSetColumn="Installment_Price" />
+              <Mapping SourceColumn="Product_Name" DataSetColumn="Product_Name" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Debt.Debt_Date, Customer.Customer_Name, Customer.Customer_Surname, Sale.Product_No, Sale.Sale_Date, Sale.Total_Price, Debt.Remaining_Debt, Sale.Installment_No, Debt.Remaining_Installment_No, 
+                  Debt.Installment_Price, Product.Product_Name
+FROM     Customer INNER JOIN
+                  Debt ON Customer.Customer_TC_No = Debt.Customer_TC_No INNER JOIN
+                  Sale ON Customer.Customer_TC_No = Sale.Customer_TC_No AND Debt.Sale_No = Sale.Sale_No INNER JOIN
+                  Product ON Sale.Product_No = Product.Product_No
+WHERE  (Sale.Sale_Type = 'Bill') AND (Customer.Customer_Name LIKE @Customer_Name) AND (Customer.Customer_Surname LIKE @Customer_Surname)
+ORDER BY Debt.Debt_Date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Customer_Name" ColumnName="Customer_Name" DataSourceName="Store_Manager.dbo.Customer" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Customer_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="Customer_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Customer_Surname" ColumnName="Customer_Surname" DataSourceName="Store_Manager.dbo.Customer" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Customer_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="Customer_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerTableAdapter" GeneratorDataComponentClassName="CustomerTableAdapter" Name="Customer" UserDataComponentName="CustomerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Customer] WHERE (([Customer_TC_No] = @Original_Customer_TC_No) AND ([Customer_Name] = @Original_Customer_Name) AND ([Customer_Surname] = @Original_Customer_Surname) AND ([Customer_Phone_No] = @Original_Customer_Phone_No) AND ([Customer_E_Mail] = @Original_Customer_E_Mail) AND ([Customer_Debt] = @Original_Customer_Debt) AND ([Customer_Point] = @Original_Customer_Point))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Customer_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Customer_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Phone_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Customer_E_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_E_Mail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_Debt" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Debt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_Point" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Point" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Customer] ([Customer_TC_No], [Customer_Name], [Customer_Surname], [Customer_Address], [Customer_Phone_No], [Customer_E_Mail], [Customer_Debt], [Customer_Point]) VALUES (@Customer_TC_No, @Customer_Name, @Customer_Surname, @Customer_Address, @Customer_Phone_No, @Customer_E_Mail, @Customer_Debt, @Customer_Point);
+SELECT Customer_TC_No, Customer_Name, Customer_Surname, Customer_Address, Customer_Phone_No, Customer_E_Mail, Customer_Debt, Customer_Point FROM Customer WHERE (Customer_TC_No = @Customer_TC_No) ORDER BY Customer_TC_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Phone_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_E_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_E_Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_Debt" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Debt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_Point" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Point" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM Customer 
+ORDER BY Customer_TC_No ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Customer] SET [Customer_TC_No] = @Customer_TC_No, [Customer_Name] = @Customer_Name, [Customer_Surname] = @Customer_Surname, [Customer_Address] = @Customer_Address, [Customer_Phone_No] = @Customer_Phone_No, [Customer_E_Mail] = @Customer_E_Mail, [Customer_Debt] = @Customer_Debt, [Customer_Point] = @Customer_Point WHERE (([Customer_TC_No] = @Original_Customer_TC_No) AND ([Customer_Name] = @Original_Customer_Name) AND ([Customer_Surname] = @Original_Customer_Surname) AND ([Customer_Phone_No] = @Original_Customer_Phone_No) AND ([Customer_E_Mail] = @Original_Customer_E_Mail) AND ([Customer_Debt] = @Original_Customer_Debt) AND ([Customer_Point] = @Original_Customer_Point));
+SELECT Customer_TC_No, Customer_Name, Customer_Surname, Customer_Address, Customer_Phone_No, Customer_E_Mail, Customer_Debt, Customer_Point FROM Customer WHERE (Customer_TC_No = @Customer_TC_No) ORDER BY Customer_TC_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Phone_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Customer_E_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_E_Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_Debt" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Debt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Customer_Point" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Point" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Customer_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Customer_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Phone_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Customer_E_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Customer_E_Mail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_Debt" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Debt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Customer_Point" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Customer_Point" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Customer_TC_No" DataSetColumn="Customer_TC_No" />
+              <Mapping SourceColumn="Customer_Name" DataSetColumn="Customer_Name" />
+              <Mapping SourceColumn="Customer_Surname" DataSetColumn="Customer_Surname" />
+              <Mapping SourceColumn="Customer_Address" DataSetColumn="Customer_Address" />
+              <Mapping SourceColumn="Customer_Phone_No" DataSetColumn="Customer_Phone_No" />
+              <Mapping SourceColumn="Customer_E_Mail" DataSetColumn="Customer_E_Mail" />
+              <Mapping SourceColumn="Customer_Debt" DataSetColumn="Customer_Debt" />
+              <Mapping SourceColumn="Customer_Point" DataSetColumn="Customer_Point" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM Customer 
+WHERE (Customer_Name LIKE @Customer_Name) AND (Customer_Surname LIKE @Customer_Surname)
+ORDER BY Customer_TC_No ASC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Customer_Name" ColumnName="Customer_Name" DataSourceName="Store_Manager.dbo.Customer" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Customer_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="Customer_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Customer_Surname" ColumnName="Customer_Surname" DataSourceName="Store_Manager.dbo.Customer" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Customer_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="Customer_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SupplierTableAdapter" GeneratorDataComponentClassName="SupplierTableAdapter" Name="Supplier" UserDataComponentName="SupplierTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Supplier" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Supplier] WHERE (([Supplier_TC_No] = @Original_Supplier_TC_No) AND ([Supplier_Name] = @Original_Supplier_Name) AND ([Supplier_Surname] = @Original_Supplier_Surname) AND ([Supplier_Phone_No] = @Original_Supplier_Phone_No))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Supplier_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Supplier_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_Phone_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Supplier] ([Supplier_TC_No], [Supplier_Firm_Name], [Supplier_Name], [Supplier_Surname], [Supplier_Address], [Supplier_Phone_No], [Supplier_E_Mail]) VALUES (@Supplier_TC_No, @Supplier_Firm_Name, @Supplier_Name, @Supplier_Surname, @Supplier_Address, @Supplier_Phone_No, @Supplier_E_Mail);
+SELECT Supplier_TC_No, Supplier_Firm_Name, Supplier_Name, Supplier_Surname, Supplier_Address, Supplier_Phone_No, Supplier_E_Mail FROM Supplier WHERE (Supplier_TC_No = @Supplier_TC_No) ORDER BY Supplier_TC_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Firm_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Firm_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_Phone_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_E_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_E_Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM Supplier
+ORDER BY Supplier_TC_No ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Supplier] SET [Supplier_TC_No] = @Supplier_TC_No, [Supplier_Firm_Name] = @Supplier_Firm_Name, [Supplier_Name] = @Supplier_Name, [Supplier_Surname] = @Supplier_Surname, [Supplier_Address] = @Supplier_Address, [Supplier_Phone_No] = @Supplier_Phone_No, [Supplier_E_Mail] = @Supplier_E_Mail WHERE (([Supplier_TC_No] = @Original_Supplier_TC_No) AND ([Supplier_Name] = @Original_Supplier_Name) AND ([Supplier_Surname] = @Original_Supplier_Surname) AND ([Supplier_Phone_No] = @Original_Supplier_Phone_No));
+SELECT Supplier_TC_No, Supplier_Firm_Name, Supplier_Name, Supplier_Surname, Supplier_Address, Supplier_Phone_No, Supplier_E_Mail FROM Supplier WHERE (Supplier_TC_No = @Supplier_TC_No) ORDER BY Supplier_TC_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Firm_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Firm_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_Phone_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Supplier_E_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_E_Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Supplier_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Supplier_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Supplier_Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_Phone_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_Phone_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Supplier_TC_No" DataSetColumn="Supplier_TC_No" />
+              <Mapping SourceColumn="Supplier_Firm_Name" DataSetColumn="Supplier_Firm_Name" />
+              <Mapping SourceColumn="Supplier_Name" DataSetColumn="Supplier_Name" />
+              <Mapping SourceColumn="Supplier_Surname" DataSetColumn="Supplier_Surname" />
+              <Mapping SourceColumn="Supplier_Address" DataSetColumn="Supplier_Address" />
+              <Mapping SourceColumn="Supplier_Phone_No" DataSetColumn="Supplier_Phone_No" />
+              <Mapping SourceColumn="Supplier_E_Mail" DataSetColumn="Supplier_E_Mail" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Supplier" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM Supplier
+WHERE (Supplier_Name LIKE @Supplier_Name) AND (Supplier_Surname LIKE @Supplier_Surname)
+ORDER BY Supplier_TC_No ASC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Supplier_Name" ColumnName="Supplier_Name" DataSourceName="Store_Manager.dbo.Supplier" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Supplier_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Supplier_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Supplier_Surname" ColumnName="Supplier_Surname" DataSourceName="Store_Manager.dbo.Supplier" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Supplier_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Supplier_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductWarehouseTableAdapter" GeneratorDataComponentClassName="ProductWarehouseTableAdapter" Name="ProductWarehouse" UserDataComponentName="ProductWarehouseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Product] WHERE (([Product_No] = @Original_Product_No) AND ([Product_Price] = @Original_Product_Price) AND ((@IsNull_Supplier_TC_No = 1 AND [Supplier_TC_No] IS NULL) OR ([Supplier_TC_No] = @Original_Supplier_TC_No)) AND ((@IsNull_Warehouse_No = 1 AND [Warehouse_No] IS NULL) OR ([Warehouse_No] = @Original_Warehouse_No)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Supplier_TC_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Warehouse_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Warehouse_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Warehouse_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Warehouse_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Product] ([Product_No], [Product_Name], [Product_Firm_Name], [Product_Type], [Product_Price], [Supplier_TC_No], [Warehouse_No]) VALUES (@Product_No, @Product_Name, @Product_Firm_Name, @Product_Type, @Product_Price, @Supplier_TC_No, @Warehouse_No);
+SELECT Product_No, Product_Name, Product_Firm_Name, Product_Type, Product_Price, Supplier_TC_No, Warehouse_No FROM Product WHERE (Product_No = @Product_No) ORDER BY Product_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Firm_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Firm_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Warehouse_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Warehouse_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Product_No,Product_Name,Product_Firm_Name,Product_Type,Product_Price,Supplier_TC_No,Warehouse_No 
+FROM Product WHERE Warehouse_No IS NOT Null
+ORDER BY Product_No ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Product] SET [Product_No] = @Product_No, [Product_Name] = @Product_Name, [Product_Firm_Name] = @Product_Firm_Name, [Product_Type] = @Product_Type, [Product_Price] = @Product_Price, [Supplier_TC_No] = @Supplier_TC_No, [Warehouse_No] = @Warehouse_No WHERE (([Product_No] = @Original_Product_No) AND ([Product_Price] = @Original_Product_Price) AND ((@IsNull_Supplier_TC_No = 1 AND [Supplier_TC_No] IS NULL) OR ([Supplier_TC_No] = @Original_Supplier_TC_No)) AND ((@IsNull_Warehouse_No = 1 AND [Warehouse_No] IS NULL) OR ([Warehouse_No] = @Original_Warehouse_No)));
+SELECT Product_No, Product_Name, Product_Firm_Name, Product_Type, Product_Price, Supplier_TC_No, Warehouse_No FROM Product WHERE (Product_No = @Product_No) ORDER BY Product_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Firm_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Firm_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Warehouse_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Warehouse_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Supplier_TC_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Warehouse_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Warehouse_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Warehouse_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Warehouse_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product_No" DataSetColumn="Product_No" />
+              <Mapping SourceColumn="Product_Name" DataSetColumn="Product_Name" />
+              <Mapping SourceColumn="Product_Firm_Name" DataSetColumn="Product_Firm_Name" />
+              <Mapping SourceColumn="Product_Type" DataSetColumn="Product_Type" />
+              <Mapping SourceColumn="Product_Price" DataSetColumn="Product_Price" />
+              <Mapping SourceColumn="Supplier_TC_No" DataSetColumn="Supplier_TC_No" />
+              <Mapping SourceColumn="Warehouse_No" DataSetColumn="Warehouse_No" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Product_No,Product_Name,Product_Firm_Name,Product_Type,Product_Price,Supplier_TC_No,Warehouse_No 
+FROM Product WHERE Warehouse_No IS NOT Null AND Product_Name LIKE @Product_Name AND Product_Type LIKE @Product_Type
+ORDER BY Product_No ASC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product_Name" ColumnName="Product_Name" DataSourceName="Store_Manager.dbo.Product" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product_Type" ColumnName="Product_Type" DataSourceName="Store_Manager.dbo.Product" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductStoreTableAdapter" GeneratorDataComponentClassName="ProductStoreTableAdapter" Name="ProductStore" UserDataComponentName="ProductStoreTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Product] WHERE (([Product_No] = @Original_Product_No) AND ([Product_Price] = @Original_Product_Price) AND ((@IsNull_Supplier_TC_No = 1 AND [Supplier_TC_No] IS NULL) OR ([Supplier_TC_No] = @Original_Supplier_TC_No)) AND ((@IsNull_Store_No = 1 AND [Store_No] IS NULL) OR ([Store_No] = @Original_Store_No)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Supplier_TC_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Store_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Store_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Store_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Store_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Product] ([Product_No], [Product_Name], [Product_Firm_Name], [Product_Type], [Product_Price], [Supplier_TC_No], [Store_No]) VALUES (@Product_No, @Product_Name, @Product_Firm_Name, @Product_Type, @Product_Price, @Supplier_TC_No, @Store_No);
+SELECT Product_No, Product_Name, Product_Firm_Name, Product_Type, Product_Price, Supplier_TC_No, Store_No FROM Product WHERE (Product_No = @Product_No) ORDER BY Product_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Firm_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Firm_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Store_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Store_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Product_No,Product_Name,Product_Firm_Name,Product_Type,Product_Price,Supplier_TC_No,Store_No FROM Product WHERE Store_No IS NOT Null ORDER BY Product_No ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Product] SET [Product_No] = @Product_No, [Product_Name] = @Product_Name, [Product_Firm_Name] = @Product_Firm_Name, [Product_Type] = @Product_Type, [Product_Price] = @Product_Price, [Supplier_TC_No] = @Supplier_TC_No, [Store_No] = @Store_No WHERE (([Product_No] = @Original_Product_No) AND ([Product_Price] = @Original_Product_Price) AND ((@IsNull_Supplier_TC_No = 1 AND [Supplier_TC_No] IS NULL) OR ([Supplier_TC_No] = @Original_Supplier_TC_No)) AND ((@IsNull_Store_No = 1 AND [Store_No] IS NULL) OR ([Store_No] = @Original_Store_No)));
+SELECT Product_No, Product_Name, Product_Firm_Name, Product_Type, Product_Price, Supplier_TC_No, Store_No FROM Product WHERE (Product_No = @Product_No) ORDER BY Product_No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Firm_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Firm_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Store_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Store_No" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Product_Price" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Product_Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Supplier_TC_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Supplier_TC_No" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Supplier_TC_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Store_No" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Store_No" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Store_No" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Store_No" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product_No" DataSetColumn="Product_No" />
+              <Mapping SourceColumn="Product_Name" DataSetColumn="Product_Name" />
+              <Mapping SourceColumn="Product_Firm_Name" DataSetColumn="Product_Firm_Name" />
+              <Mapping SourceColumn="Product_Type" DataSetColumn="Product_Type" />
+              <Mapping SourceColumn="Product_Price" DataSetColumn="Product_Price" />
+              <Mapping SourceColumn="Supplier_TC_No" DataSetColumn="Supplier_TC_No" />
+              <Mapping SourceColumn="Store_No" DataSetColumn="Store_No" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectName="Store_Manager.dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Product_No,Product_Name,Product_Firm_Name,Product_Type,Product_Price,Supplier_TC_No,Store_No FROM Product WHERE Store_No IS NOT Null AND Product_Name LIKE @Product_Name AND Product_Type LIKE @Product_Type ORDER BY Product_No ASC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product_Name" ColumnName="Product_Name" DataSourceName="Store_Manager.dbo.Product" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product_Type" ColumnName="Product_Type" DataSourceName="Store_Manager.dbo.Product" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SoldProductsTableAdapter" GeneratorDataComponentClassName="SoldProductsTableAdapter" Name="SoldProducts" UserDataComponentName="SoldProductsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Sale.Sale_Date,Sale.Customer_TC_No,Sale.Sale_Type,
+(CASE Sale.Sale_Type 
+WHEN 'Bill' THEN 'Taksit' 
+WHEN 'Cash' THEN 'Nakit' 
+ELSE 'Kart' 
+END) as [SType],
+Product.Product_No,Product.Product_Name,Product.Product_Firm_Name,Product.Product_Type,Product.Product_Price,Product.Supplier_TC_No
+FROM  Product INNER JOIN
+                  Sale ON Product.Product_No=Sale.Product_No
+WHERE Store_No IS Null AND Warehouse_No IS Null
+ORDER BY Sale.Sale_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Sale_Date" DataSetColumn="Sale_Date" />
+              <Mapping SourceColumn="Customer_TC_No" DataSetColumn="Customer_TC_No" />
+              <Mapping SourceColumn="Product_No" DataSetColumn="Product_No" />
+              <Mapping SourceColumn="Product_Name" DataSetColumn="Product_Name" />
+              <Mapping SourceColumn="Product_Firm_Name" DataSetColumn="Product_Firm_Name" />
+              <Mapping SourceColumn="Product_Type" DataSetColumn="Product_Type" />
+              <Mapping SourceColumn="Product_Price" DataSetColumn="Product_Price" />
+              <Mapping SourceColumn="Supplier_TC_No" DataSetColumn="Supplier_TC_No" />
+              <Mapping SourceColumn="SType" DataSetColumn="SType" />
+              <Mapping SourceColumn="Sale_Type" DataSetColumn="Sale_Type" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Store_ManagerConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Sale.Sale_Date,Sale.Customer_TC_No,Sale.Sale_Type,
+(CASE Sale.Sale_Type 
+WHEN 'Bill' THEN 'Taksit' 
+WHEN 'Cash' THEN 'Nakit' 
+ELSE 'Kart' 
+END) as [SType],
+Product.Product_No,Product.Product_Name,Product.Product_Firm_Name,Product.Product_Type,Product.Product_Price,Product.Supplier_TC_No
+FROM  Product INNER JOIN
+                  Sale ON Product.Product_No=Sale.Product_No
+WHERE Store_No IS Null AND Warehouse_No IS Null AND Product.Product_Name LIKE @Product_Name AND Product.Product_Type LIKE @Product_Type
+ORDER BY Sale.Sale_Date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product_Name" ColumnName="Product_Name" DataSourceName="Store_Manager.dbo.Product" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Product_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Product_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product_Type" ColumnName="Product_Type" DataSourceName="Store_Manager.dbo.Product" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Product_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Product_Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Store_ManagerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Store_ManagerDataSet" msprop:Generator_UserDSName="Store_ManagerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DebtInnerJoin" msprop:Generator_TableClassName="DebtInnerJoinDataTable" msprop:Generator_TableVarName="tableDebtInnerJoin" msprop:Generator_TablePropName="DebtInnerJoin" msprop:Generator_RowDeletingName="DebtInnerJoinRowDeleting" msprop:Generator_RowChangingName="DebtInnerJoinRowChanging" msprop:Generator_RowEvHandlerName="DebtInnerJoinRowChangeEventHandler" msprop:Generator_RowDeletedName="DebtInnerJoinRowDeleted" msprop:Generator_UserTableName="DebtInnerJoin" msprop:Generator_RowChangedName="DebtInnerJoinRowChanged" msprop:Generator_RowEvArgName="DebtInnerJoinRowChangeEvent" msprop:Generator_RowClassName="DebtInnerJoinRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Debt_Date" msprop:Generator_ColumnVarNameInTable="columnDebt_Date" msprop:Generator_ColumnPropNameInRow="Debt_Date" msprop:Generator_ColumnPropNameInTable="Debt_DateColumn" msprop:Generator_UserColumnName="Debt_Date" type="xs:dateTime" />
+              <xs:element name="Customer_Name" msprop:Generator_ColumnVarNameInTable="columnCustomer_Name" msprop:Generator_ColumnPropNameInRow="Customer_Name" msprop:Generator_ColumnPropNameInTable="Customer_NameColumn" msprop:Generator_UserColumnName="Customer_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_Surname" msprop:Generator_ColumnVarNameInTable="columnCustomer_Surname" msprop:Generator_ColumnPropNameInRow="Customer_Surname" msprop:Generator_ColumnPropNameInTable="Customer_SurnameColumn" msprop:Generator_UserColumnName="Customer_Surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_No" msprop:Generator_ColumnVarNameInTable="columnProduct_No" msprop:Generator_ColumnPropNameInRow="Product_No" msprop:Generator_ColumnPropNameInTable="Product_NoColumn" msprop:Generator_UserColumnName="Product_No" type="xs:long" />
+              <xs:element name="Sale_Date" msprop:Generator_ColumnVarNameInTable="columnSale_Date" msprop:Generator_ColumnPropNameInRow="Sale_Date" msprop:Generator_ColumnPropNameInTable="Sale_DateColumn" msprop:Generator_UserColumnName="Sale_Date" type="xs:dateTime" />
+              <xs:element name="Total_Price" msprop:Generator_ColumnVarNameInTable="columnTotal_Price" msprop:Generator_ColumnPropNameInRow="Total_Price" msprop:Generator_ColumnPropNameInTable="Total_PriceColumn" msprop:Generator_UserColumnName="Total_Price" type="xs:long" />
+              <xs:element name="Remaining_Debt" msprop:Generator_ColumnVarNameInTable="columnRemaining_Debt" msprop:Generator_ColumnPropNameInRow="Remaining_Debt" msprop:Generator_ColumnPropNameInTable="Remaining_DebtColumn" msprop:Generator_UserColumnName="Remaining_Debt" type="xs:long" />
+              <xs:element name="Installment_No" msprop:Generator_ColumnVarNameInTable="columnInstallment_No" msprop:Generator_ColumnPropNameInRow="Installment_No" msprop:Generator_ColumnPropNameInTable="Installment_NoColumn" msprop:Generator_UserColumnName="Installment_No" type="xs:int" minOccurs="0" />
+              <xs:element name="Remaining_Installment_No" msprop:Generator_ColumnVarNameInTable="columnRemaining_Installment_No" msprop:Generator_ColumnPropNameInRow="Remaining_Installment_No" msprop:Generator_ColumnPropNameInTable="Remaining_Installment_NoColumn" msprop:Generator_UserColumnName="Remaining_Installment_No" type="xs:int" minOccurs="0" />
+              <xs:element name="Installment_Price" msprop:Generator_ColumnVarNameInTable="columnInstallment_Price" msprop:Generator_ColumnPropNameInRow="Installment_Price" msprop:Generator_ColumnPropNameInTable="Installment_PriceColumn" msprop:Generator_UserColumnName="Installment_Price" type="xs:int" minOccurs="0" />
+              <xs:element name="Product_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_UserColumnName="Product_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_UserTableName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_RowClassName="CustomerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Customer_TC_No" msprop:Generator_ColumnVarNameInTable="columnCustomer_TC_No" msprop:Generator_ColumnPropNameInRow="Customer_TC_No" msprop:Generator_ColumnPropNameInTable="Customer_TC_NoColumn" msprop:Generator_UserColumnName="Customer_TC_No" type="xs:long" />
+              <xs:element name="Customer_Name" msprop:Generator_ColumnVarNameInTable="columnCustomer_Name" msprop:Generator_ColumnPropNameInRow="Customer_Name" msprop:Generator_ColumnPropNameInTable="Customer_NameColumn" msprop:Generator_UserColumnName="Customer_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_Surname" msprop:Generator_ColumnVarNameInTable="columnCustomer_Surname" msprop:Generator_ColumnPropNameInRow="Customer_Surname" msprop:Generator_ColumnPropNameInTable="Customer_SurnameColumn" msprop:Generator_UserColumnName="Customer_Surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_Address" msprop:Generator_ColumnVarNameInTable="columnCustomer_Address" msprop:Generator_ColumnPropNameInRow="Customer_Address" msprop:Generator_ColumnPropNameInTable="Customer_AddressColumn" msprop:Generator_UserColumnName="Customer_Address">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_Phone_No" msprop:Generator_ColumnVarNameInTable="columnCustomer_Phone_No" msprop:Generator_ColumnPropNameInRow="Customer_Phone_No" msprop:Generator_ColumnPropNameInTable="Customer_Phone_NoColumn" msprop:Generator_UserColumnName="Customer_Phone_No" type="xs:long" />
+              <xs:element name="Customer_E_Mail" msprop:Generator_ColumnVarNameInTable="columnCustomer_E_Mail" msprop:Generator_ColumnPropNameInRow="Customer_E_Mail" msprop:Generator_ColumnPropNameInTable="Customer_E_MailColumn" msprop:Generator_UserColumnName="Customer_E_Mail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_Debt" msprop:Generator_ColumnVarNameInTable="columnCustomer_Debt" msprop:Generator_ColumnPropNameInRow="Customer_Debt" msprop:Generator_ColumnPropNameInTable="Customer_DebtColumn" msprop:Generator_UserColumnName="Customer_Debt" type="xs:long" />
+              <xs:element name="Customer_Point" msprop:Generator_ColumnVarNameInTable="columnCustomer_Point" msprop:Generator_ColumnPropNameInRow="Customer_Point" msprop:Generator_ColumnPropNameInTable="Customer_PointColumn" msprop:Generator_UserColumnName="Customer_Point" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Supplier" msprop:Generator_TableClassName="SupplierDataTable" msprop:Generator_TableVarName="tableSupplier" msprop:Generator_TablePropName="Supplier" msprop:Generator_RowDeletingName="SupplierRowDeleting" msprop:Generator_RowChangingName="SupplierRowChanging" msprop:Generator_RowEvHandlerName="SupplierRowChangeEventHandler" msprop:Generator_RowDeletedName="SupplierRowDeleted" msprop:Generator_UserTableName="Supplier" msprop:Generator_RowChangedName="SupplierRowChanged" msprop:Generator_RowEvArgName="SupplierRowChangeEvent" msprop:Generator_RowClassName="SupplierRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Supplier_TC_No" msprop:Generator_ColumnVarNameInTable="columnSupplier_TC_No" msprop:Generator_ColumnPropNameInRow="Supplier_TC_No" msprop:Generator_ColumnPropNameInTable="Supplier_TC_NoColumn" msprop:Generator_UserColumnName="Supplier_TC_No" type="xs:long" />
+              <xs:element name="Supplier_Firm_Name" msprop:Generator_ColumnVarNameInTable="columnSupplier_Firm_Name" msprop:Generator_ColumnPropNameInRow="Supplier_Firm_Name" msprop:Generator_ColumnPropNameInTable="Supplier_Firm_NameColumn" msprop:Generator_UserColumnName="Supplier_Firm_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supplier_Name" msprop:Generator_ColumnVarNameInTable="columnSupplier_Name" msprop:Generator_ColumnPropNameInRow="Supplier_Name" msprop:Generator_ColumnPropNameInTable="Supplier_NameColumn" msprop:Generator_UserColumnName="Supplier_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supplier_Surname" msprop:Generator_ColumnVarNameInTable="columnSupplier_Surname" msprop:Generator_ColumnPropNameInRow="Supplier_Surname" msprop:Generator_ColumnPropNameInTable="Supplier_SurnameColumn" msprop:Generator_UserColumnName="Supplier_Surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supplier_Address" msprop:Generator_ColumnVarNameInTable="columnSupplier_Address" msprop:Generator_ColumnPropNameInRow="Supplier_Address" msprop:Generator_ColumnPropNameInTable="Supplier_AddressColumn" msprop:Generator_UserColumnName="Supplier_Address">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supplier_Phone_No" msprop:Generator_ColumnVarNameInTable="columnSupplier_Phone_No" msprop:Generator_ColumnPropNameInRow="Supplier_Phone_No" msprop:Generator_ColumnPropNameInTable="Supplier_Phone_NoColumn" msprop:Generator_UserColumnName="Supplier_Phone_No" type="xs:long" />
+              <xs:element name="Supplier_E_Mail" msprop:Generator_ColumnVarNameInTable="columnSupplier_E_Mail" msprop:Generator_ColumnPropNameInRow="Supplier_E_Mail" msprop:Generator_ColumnPropNameInTable="Supplier_E_MailColumn" msprop:Generator_UserColumnName="Supplier_E_Mail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProductWarehouse" msprop:Generator_TableClassName="ProductWarehouseDataTable" msprop:Generator_TableVarName="tableProductWarehouse" msprop:Generator_TablePropName="ProductWarehouse" msprop:Generator_RowDeletingName="ProductWarehouseRowDeleting" msprop:Generator_RowChangingName="ProductWarehouseRowChanging" msprop:Generator_RowEvHandlerName="ProductWarehouseRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductWarehouseRowDeleted" msprop:Generator_UserTableName="ProductWarehouse" msprop:Generator_RowChangedName="ProductWarehouseRowChanged" msprop:Generator_RowEvArgName="ProductWarehouseRowChangeEvent" msprop:Generator_RowClassName="ProductWarehouseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product_No" msprop:Generator_ColumnVarNameInTable="columnProduct_No" msprop:Generator_ColumnPropNameInRow="Product_No" msprop:Generator_ColumnPropNameInTable="Product_NoColumn" msprop:Generator_UserColumnName="Product_No" type="xs:long" />
+              <xs:element name="Product_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_UserColumnName="Product_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Firm_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Firm_Name" msprop:Generator_ColumnPropNameInRow="Product_Firm_Name" msprop:Generator_ColumnPropNameInTable="Product_Firm_NameColumn" msprop:Generator_UserColumnName="Product_Firm_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Type" msprop:Generator_ColumnVarNameInTable="columnProduct_Type" msprop:Generator_ColumnPropNameInRow="Product_Type" msprop:Generator_ColumnPropNameInTable="Product_TypeColumn" msprop:Generator_UserColumnName="Product_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Price" msprop:Generator_ColumnVarNameInTable="columnProduct_Price" msprop:Generator_ColumnPropNameInRow="Product_Price" msprop:Generator_ColumnPropNameInTable="Product_PriceColumn" msprop:Generator_UserColumnName="Product_Price" type="xs:long" />
+              <xs:element name="Supplier_TC_No" msprop:Generator_ColumnVarNameInTable="columnSupplier_TC_No" msprop:Generator_ColumnPropNameInRow="Supplier_TC_No" msprop:Generator_ColumnPropNameInTable="Supplier_TC_NoColumn" msprop:Generator_UserColumnName="Supplier_TC_No" type="xs:long" minOccurs="0" />
+              <xs:element name="Warehouse_No" msprop:Generator_ColumnVarNameInTable="columnWarehouse_No" msprop:Generator_ColumnPropNameInRow="Warehouse_No" msprop:Generator_ColumnPropNameInTable="Warehouse_NoColumn" msprop:Generator_UserColumnName="Warehouse_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProductStore" msprop:Generator_TableClassName="ProductStoreDataTable" msprop:Generator_TableVarName="tableProductStore" msprop:Generator_TablePropName="ProductStore" msprop:Generator_RowDeletingName="ProductStoreRowDeleting" msprop:Generator_RowChangingName="ProductStoreRowChanging" msprop:Generator_RowEvHandlerName="ProductStoreRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductStoreRowDeleted" msprop:Generator_UserTableName="ProductStore" msprop:Generator_RowChangedName="ProductStoreRowChanged" msprop:Generator_RowEvArgName="ProductStoreRowChangeEvent" msprop:Generator_RowClassName="ProductStoreRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product_No" msprop:Generator_ColumnVarNameInTable="columnProduct_No" msprop:Generator_ColumnPropNameInRow="Product_No" msprop:Generator_ColumnPropNameInTable="Product_NoColumn" msprop:Generator_UserColumnName="Product_No" type="xs:long" />
+              <xs:element name="Product_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_UserColumnName="Product_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Firm_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Firm_Name" msprop:Generator_ColumnPropNameInRow="Product_Firm_Name" msprop:Generator_ColumnPropNameInTable="Product_Firm_NameColumn" msprop:Generator_UserColumnName="Product_Firm_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Type" msprop:Generator_ColumnVarNameInTable="columnProduct_Type" msprop:Generator_ColumnPropNameInRow="Product_Type" msprop:Generator_ColumnPropNameInTable="Product_TypeColumn" msprop:Generator_UserColumnName="Product_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Price" msprop:Generator_ColumnVarNameInTable="columnProduct_Price" msprop:Generator_ColumnPropNameInRow="Product_Price" msprop:Generator_ColumnPropNameInTable="Product_PriceColumn" msprop:Generator_UserColumnName="Product_Price" type="xs:long" />
+              <xs:element name="Supplier_TC_No" msprop:Generator_ColumnVarNameInTable="columnSupplier_TC_No" msprop:Generator_ColumnPropNameInRow="Supplier_TC_No" msprop:Generator_ColumnPropNameInTable="Supplier_TC_NoColumn" msprop:Generator_UserColumnName="Supplier_TC_No" type="xs:long" minOccurs="0" />
+              <xs:element name="Store_No" msprop:Generator_ColumnVarNameInTable="columnStore_No" msprop:Generator_ColumnPropNameInRow="Store_No" msprop:Generator_ColumnPropNameInTable="Store_NoColumn" msprop:Generator_UserColumnName="Store_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SoldProducts" msprop:Generator_TableClassName="SoldProductsDataTable" msprop:Generator_TableVarName="tableSoldProducts" msprop:Generator_RowChangedName="SoldProductsRowChanged" msprop:Generator_TablePropName="SoldProducts" msprop:Generator_RowDeletingName="SoldProductsRowDeleting" msprop:Generator_RowChangingName="SoldProductsRowChanging" msprop:Generator_RowEvHandlerName="SoldProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="SoldProductsRowDeleted" msprop:Generator_RowClassName="SoldProductsRow" msprop:Generator_UserTableName="SoldProducts" msprop:Generator_RowEvArgName="SoldProductsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sale_Date" msprop:Generator_ColumnVarNameInTable="columnSale_Date" msprop:Generator_ColumnPropNameInRow="Sale_Date" msprop:Generator_ColumnPropNameInTable="Sale_DateColumn" msprop:Generator_UserColumnName="Sale_Date" type="xs:dateTime" />
+              <xs:element name="Customer_TC_No" msprop:Generator_ColumnVarNameInTable="columnCustomer_TC_No" msprop:Generator_ColumnPropNameInRow="Customer_TC_No" msprop:Generator_ColumnPropNameInTable="Customer_TC_NoColumn" msprop:Generator_UserColumnName="Customer_TC_No" type="xs:long" />
+              <xs:element name="Product_No" msprop:Generator_ColumnVarNameInTable="columnProduct_No" msprop:Generator_ColumnPropNameInRow="Product_No" msprop:Generator_ColumnPropNameInTable="Product_NoColumn" msprop:Generator_UserColumnName="Product_No" type="xs:long" />
+              <xs:element name="Product_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_UserColumnName="Product_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Firm_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Firm_Name" msprop:Generator_ColumnPropNameInRow="Product_Firm_Name" msprop:Generator_ColumnPropNameInTable="Product_Firm_NameColumn" msprop:Generator_UserColumnName="Product_Firm_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Type" msprop:Generator_ColumnVarNameInTable="columnProduct_Type" msprop:Generator_ColumnPropNameInRow="Product_Type" msprop:Generator_ColumnPropNameInTable="Product_TypeColumn" msprop:Generator_UserColumnName="Product_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Price" msprop:Generator_ColumnVarNameInTable="columnProduct_Price" msprop:Generator_ColumnPropNameInRow="Product_Price" msprop:Generator_ColumnPropNameInTable="Product_PriceColumn" msprop:Generator_UserColumnName="Product_Price" type="xs:long" />
+              <xs:element name="Supplier_TC_No" msprop:Generator_ColumnVarNameInTable="columnSupplier_TC_No" msprop:Generator_ColumnPropNameInRow="Supplier_TC_No" msprop:Generator_ColumnPropNameInTable="Supplier_TC_NoColumn" msprop:Generator_UserColumnName="Supplier_TC_No" type="xs:long" minOccurs="0" />
+              <xs:element name="SType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSType" msprop:Generator_ColumnPropNameInRow="SType" msprop:Generator_ColumnPropNameInTable="STypeColumn" msprop:Generator_UserColumnName="SType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sale_Type" msprop:Generator_ColumnVarNameInTable="columnSale_Type" msprop:Generator_ColumnPropNameInRow="Sale_Type" msprop:Generator_ColumnPropNameInTable="Sale_TypeColumn" msprop:Generator_UserColumnName="Sale_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Customer" />
+      <xs:field xpath="mstns:Customer_TC_No" />
+    </xs:unique>
+    <xs:unique name="Supplier_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Supplier" />
+      <xs:field xpath="mstns:Supplier_TC_No" />
+    </xs:unique>
+    <xs:unique name="ProductWarehouse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProductWarehouse" />
+      <xs:field xpath="mstns:Product_No" />
+    </xs:unique>
+    <xs:unique name="ProductStore_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProductStore" />
+      <xs:field xpath="mstns:Product_No" />
+    </xs:unique>
+    <xs:unique name="SoldProducts_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SoldProducts" />
+      <xs:field xpath="mstns:Product_No" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
